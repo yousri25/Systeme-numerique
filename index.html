@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Circuits électriques – Fiches de révision</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--ink:#1e2a44;--mut:#5b6788;--line:#dde1ee;--d1:#f5a142;--d2:#4fc98a;--d3:#1fa4f2;--d4:#ec4a8f;--d5:#5b49a8;--hl:#fff3b0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="dark"]{--bg:#12182a;--card:#1b2340;--ink:#e8ecf8;--mut:#9aa6c8;--line:#2d3760;--hl:#4a4310}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12182a;--card:#1b2340;--ink:#e8ecf8;--mut:#9aa6c8;--line:#2d3760;--hl:#4a4310}}
+html{scroll-padding-top:calc(60px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Nunito,system-ui,sans-serif}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--card);border-bottom:1px solid var(--line);display:flex;gap:4px;overflow-x:auto;padding:8px 12px;align-items:center}
+nav a{white-space:nowrap;color:var(--ink);text-decoration:none;padding:6px 12px;border-radius:99px;font-weight:600;font-size:14px}
+nav a:hover,nav a:focus-visible{background:var(--line);outline:none}
+nav button{margin-left:auto;border:1px solid var(--line);background:none;color:var(--ink);border-radius:99px;padding:5px 12px;cursor:pointer;font:inherit;font-size:14px}
+header{padding:48px 20px 28px;max-width:900px;margin:auto}
+h1{font-size:clamp(2rem,6vw,3.2rem);line-height:1.1;margin:0 0 12px;font-weight:800}
+header p{color:var(--mut);max-width:60ch;margin:0}
+.bar{display:flex;height:10px;border-radius:5px;overflow:hidden;margin-top:22px}.bar i{flex:1}
+main{max-width:900px;margin:auto;padding:0 20px 80px}
+section{margin-top:56px}
+h2{font-size:1.7rem;margin:0 0 10px;padding-left:14px;border-left:8px solid var(--c,var(--d3))}
+h3{margin:18px 0 8px;font-size:1.15rem}
+p{max-width:68ch;margin:.5em 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:12px 0;overflow-x:auto}
+.key{background:var(--hl);border-radius:8px;padding:10px 14px;margin:10px 0}
+.key .f{font:italic 19px/1.8 Georgia,"Times New Roman",serif;overflow-x:auto}
+.f{font-family:Georgia,serif;font-size:18px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}.two>.card{margin:0}
+svg{max-width:100%;height:auto;color:var(--ink)}svg .w{stroke:currentColor;stroke-width:1.8;fill:none}svg text{fill:var(--ink);font:15px Nunito,system-ui,sans-serif}svg .r{fill:var(--card);stroke:currentColor;stroke-width:1.8}svg .a{stroke:var(--d4);fill:none;stroke-width:1.8}svg .t{fill:var(--d4)}
+figure{margin:12px 0;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}figure.card{margin:12px 0}
+figure svg{width:100%;display:block}figcaption{color:var(--mut);font-size:14px;margin-top:6px;text-align:left}
+table{width:100%;border-collapse:collapse;font-size:14.5px}td,th{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--card)}
+label{display:inline-block;margin:4px 12px 4px 0;font-weight:600}input{width:84px;padding:5px 8px;font:inherit;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+.out{margin-top:10px;line-height:1.9}.out span{background:var(--hl);border-radius:6px;padding:1px 8px;font-weight:800}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0}summary{cursor:pointer;font-weight:600}details p{margin:8px 0 0;color:var(--mut)}
+ul{padding-left:20px;margin:6px 0}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="R" viewBox="0 0 44 18"><rect class="r" x="1" y="1" width="42" height="16"/></symbol>
+<symbol id="B" viewBox="0 0 14 30"><path class="w" d="M2 4v22M10 10v10" style="stroke-width:3"/></symbol>
+</defs></svg>
+<nav><a href="#base">Notions de base</a><a href="#dipoles">Dipôles</a><a href="#sources">Sources</a><a href="#serie">Série</a><a href="#parallele">Parallèle</a><a href="#gen">Générateurs</a><a href="#transfo">Transformation</a><a href="#kirchhoff">Kirchhoff</a><a href="#kennelly">Kennelly</a><a href="#superpo">Superposition</a><a href="#calc">Calculateur</a><a href="#recap">Formulaire</a><a href="#quiz">Auto-test</a><button id="th" aria-label="Changer de thème">Thème</button></nav>
+<header><h1>Circuits électriques : révision complète</h1><p>Chapitre 1 (introduction aux circuits) et chapitre 2 (méthodes de résolution) au même endroit, avec schémas, formules encadrées et un calculateur.</p>
+<div class="bar"><i style="background:var(--d1)"></i><i style="background:var(--d2)"></i><i style="background:var(--d3)"></i><i style="background:var(--d4)"></i><i style="background:var(--d5)"></i></div></header>
+<main>
+<section id="base" style="--c:var(--d1)"><h2>1. Notions de base</h2>
+<p>Un <b>circuit électrique</b> est un ensemble de composants reliés par des conducteurs, de façon à permettre la circulation du courant. Un circuit simple contient une source d'énergie, un ou plusieurs récepteurs, un interrupteur et des fils conducteurs.</p>
+<div class="two"><div class="card"><h3>Courant</h3><p>Déplacement ordonné de charges dans un conducteur. Unité : l'ampère (A). Par convention, il circule du potentiel le plus élevé vers le plus bas.</p><div class="key"><div class="f">i = dq/dt &nbsp;&nbsp; (courant constant : I = q/t)</div></div></div>
+<div class="card"><h3>Tension</h3><p>Différence de potentiel entre deux points. Unité : le volt (V).</p><div class="key"><div class="f">U<sub>AB</sub> = V<sub>B</sub> − V<sub>A</sub></div></div></div></div>
+<div class="card"><h3>Puissance électrique</h3><p>Elle mesure le débit d'énergie électrique.</p><div class="key"><div class="f">P = U · I &nbsp; (W = V · A)</div></div></div></section>
+
+<section id="dipoles" style="--c:var(--d2)"><h2>2. Dipôles</h2>
+<p>Un dipôle est un composant à <b>deux bornes</b>.</p>
+<div class="two"><div class="card"><h3>Passif</h3><p>Ne fournit pas d'énergie de façon autonome : il absorbe, stocke ou dissipe l'énergie. Exemple : la résistance.</p><div class="key"><div class="f">Loi d'Ohm : U = R · I</div></div></div>
+<div class="card"><h3>Actif</h3><p>Capable de fournir de l'énergie au circuit. Exemples : générateur, batterie, pile.</p></div></div></section>
+
+<section id="sources" style="--c:var(--d3)"><h2>3. Sources électriques</h2>
+<p>Deux familles, chacune avec un modèle <b>idéal</b> et un modèle <b>réel</b>.</p>
+<div class="two">
+<div class="card"><h3>Source de tension</h3><p>Impose une tension entre ses bornes.</p>
+<ul><li>Idéale : U = E, résistance interne r = 0</li><li>Réelle : source E avec r en série</li></ul>
+<figure><svg viewBox="0 0 330 125" role="img" aria-label="Générateur réel de tension"><defs><marker id="m0" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--d4)"/></marker></defs><path class="w" d="M36 50H84 M96 50H168 M212 50H294"/><path class="w" style="stroke-width:3" d="M84 34V66"/><path class="w" style="stroke-width:3" d="M96 41V59"/><rect class="r" x="168" y="41" width="44" height="18"/><circle class="w" cx="30" cy="50" r="4" style="fill:var(--card)"/><circle class="w" cx="300" cy="50" r="4" style="fill:var(--card)"/><text x="70" y="30" text-anchor="middle">+</text><text x="110" y="30" text-anchor="middle">−</text><text x="90" y="84" text-anchor="middle">E</text><text x="190" y="30" text-anchor="middle">r</text><text x="30" y="34" text-anchor="middle">A</text><text x="300" y="34" text-anchor="middle">B</text><path class="a" d="M300 105L30 105" marker-end="url(#m0)"/><text x="165" y="98" text-anchor="middle">U = E − r·I</text></svg><figcaption>Générateur réel de tension</figcaption></figure></div>
+<div class="card"><h3>Source de courant</h3><p>Impose un courant dans la branche.</p>
+<ul><li>Idéale : I = I₀ constant</li><li>Réelle : I₀ avec une résistance R<sub>p</sub> en parallèle</li></ul>
+<div class="key"><div class="f">I₀ = I<sub>p</sub> + I &nbsp;⇒&nbsp; I = I₀ − U / R<sub>p</sub></div></div>
+<figure><svg viewBox="0 0 300 185" role="img" aria-label="Générateur réel de courant"><defs><marker id="m1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--d4)"/></marker></defs><path class="w" d="M40 30H250 M40 160H250 M40 30V63 M40 117V160 M150 30V73 M150 117V160 M250 30V160"/><circle class="w" cx="40" cy="95" r="22"/><path class="w" d="M40 107V83M34 90L40 82L46 90"/><rect class="r" x="141" y="73" width="18" height="44"/><text x="72" y="99" text-anchor="start">I<tspan font-size="11" dy="4">0</tspan></text><text x="172" y="99" text-anchor="start">R<tspan font-size="11" dy="4">p</tspan></text><path class="a" d="M150 42L150 66" marker-end="url(#m1)"/><text x="162" y="58" text-anchor="start">I<tspan font-size="11" dy="4">p</tspan></text><path class="a" d="M185 30L232 30" marker-end="url(#m1)"/><text x="208" y="20" text-anchor="middle">I</text><path class="a" d="M280 150L280 40" marker-end="url(#m1)"/><text x="266" y="98" text-anchor="end">U</text></svg><figcaption>Source I₀ avec R<sub>p</sub> en parallèle</figcaption></figure></div></div></section>
+
+<section id="serie" style="--c:var(--d4)"><h2>4. Association en série</h2>
+<p>Des dipôles sont en série lorsqu'ils sont parcourus par le <b>même courant</b> : I = I₁ = I₂. La tension totale se répartit entre eux.</p>
+<div class="two"><figure class="card"><svg viewBox="0 0 320 195" role="img" aria-label="Deux résistances en série"><defs><marker id="m2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--d4)"/></marker></defs><path class="w" d="M50 35V84 M50 96V150 M50 35H138 M182 35H270 M270 35V150 M50 150H138 M182 150H270"/><path class="w" style="stroke-width:3" d="M36 84H64"/><path class="w" style="stroke-width:3" d="M43 96H57"/><rect class="r" x="138" y="26" width="44" height="18"/><rect class="r" x="138" y="141" width="44" height="18"/><text x="26" y="93" text-anchor="middle">E</text><text x="72" y="82" text-anchor="middle">+</text><text x="160" y="17" text-anchor="middle">R<tspan font-size="11" dy="4">1</tspan></text><text x="160" y="182" text-anchor="middle">R<tspan font-size="11" dy="4">2</tspan></text><path class="a" d="M270 75L270 112" marker-end="url(#m2)"/><text x="284" y="97" text-anchor="start">I</text><path class="a" d="M182 60L138 60" marker-end="url(#m2)"/><text x="160" y="80" text-anchor="middle">U<tspan font-size="11" dy="4">1</tspan></text><path class="a" d="M138 125L182 125" marker-end="url(#m2)"/><text x="160" y="114" text-anchor="middle">U<tspan font-size="11" dy="4">2</tspan></text></svg><figcaption>E = U₁ + U₂ et I = I₁ = I₂ (courant dans le sens horaire, flèches de tension orientées vers le potentiel le plus haut)</figcaption></figure>
+<div><div class="key"><div class="f">R<sub>eq</sub> = R₁ + R₂ + … + R<sub>N</sub></div></div>
+<h3>Diviseur de tension</h3><p>Permet d'obtenir une tension plus faible, adaptée au circuit.</p>
+<div class="key"><div class="f">U₁ = E · R₁ / (R₁ + R₂)<br>U₂ = E · R₂ / (R₁ + R₂)</div></div>
+<p>Plus la résistance est grande, plus sa part de tension est grande.</p></div></div></section>
+
+<section id="parallele" style="--c:var(--d5)"><h2>5. Association en parallèle</h2>
+<p>Des dipôles sont en parallèle quand leurs bornes sont reliées aux <b>mêmes deux nœuds</b> : même tension U, le courant se répartit (loi des nœuds I = I₁ + I₂ + I₃).</p>
+<div class="two"><figure class="card"><svg viewBox="0 0 340 228" role="img" aria-label="Trois résistances en parallèle"><defs><marker id="m3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--d4)"/></marker></defs><path class="w" d="M20 100H80 M80 35V165 M260 35V165 M260 100H320"/><path class="w" d="M80 35H148 M192 35H260"/><rect class="r" x="148" y="26" width="44" height="18"/><path class="w" d="M80 100H148 M192 100H260"/><rect class="r" x="148" y="91" width="44" height="18"/><path class="w" d="M80 165H148 M192 165H260"/><rect class="r" x="148" y="156" width="44" height="18"/><text x="170" y="18" text-anchor="middle">R<tspan font-size="11" dy="4">1</tspan></text><path class="a" d="M98 35L128 35" marker-end="url(#m3)"/><text x="112" y="55" text-anchor="middle">I<tspan font-size="11" dy="4">1</tspan></text><text x="170" y="83" text-anchor="middle">R<tspan font-size="11" dy="4">2</tspan></text><path class="a" d="M98 100L128 100" marker-end="url(#m3)"/><text x="112" y="120" text-anchor="middle">I<tspan font-size="11" dy="4">2</tspan></text><text x="170" y="148" text-anchor="middle">R<tspan font-size="11" dy="4">3</tspan></text><path class="a" d="M98 165L128 165" marker-end="url(#m3)"/><text x="112" y="185" text-anchor="middle">I<tspan font-size="11" dy="4">3</tspan></text><circle class="t" cx="80" cy="100" r="4"/><circle class="t" cx="260" cy="100" r="4"/><path class="a" d="M28 100L62 100" marker-end="url(#m3)"/><text x="45" y="88" text-anchor="middle">I</text><path class="a" d="M260 210L80 210" marker-end="url(#m3)"/><text x="170" y="203" text-anchor="middle">U</text></svg><figcaption>U₁ = U₂ = U₃ = U</figcaption></figure>
+<div><div class="key"><div class="f">1/R<sub>eq</sub> = 1/R₁ + 1/R₂ + … + 1/R<sub>N</sub></div></div>
+<p>Pour deux résistances : <span class="f">R<sub>eq</sub> = R₁R₂ / (R₁ + R₂)</span>. Avec les conductances : G<sub>eq</sub> = G₁ + G₂ + G₃.</p>
+<h3>Diviseur de courant</h3>
+<div class="key"><div class="f">I₁ = I · R₂ / (R₁ + R₂)<br>I₂ = I · R₁ / (R₁ + R₂)</div></div>
+<p>Cas général : <span class="f">I<sub>k</sub> = I · (1/R<sub>k</sub>) / Σ(1/R<sub>j</sub>)</span>. La plus petite résistance prend le plus de courant.</p></div></div>
+<details><summary>Démonstration (diviseur de courant)</summary><p>U = R_eq·I = R₁R₂/(R₁+R₂)·I, donc I₁ = U/R₁ = I·R₂/(R₁+R₂).</p></details></section>
+
+<section id="gen" style="--c:var(--d1)"><h2>6. Association de générateurs</h2>
+<table><tr><th></th><th>En série</th><th>En parallèle</th></tr>
+<tr><td>Tension réelle (E, r)</td><td>E<sub>eq</sub> = ΣE<sub>k</sub> (signe selon le sens)<br>r<sub>eq</sub> = Σr<sub>k</sub></td><td>1/r<sub>eq</sub> = Σ 1/r<sub>k</sub><br>E<sub>eq</sub> = r<sub>eq</sub> · Σ(E<sub>k</sub>/r<sub>k</sub>)</td></tr>
+<tr><td>Courant réel (I, r)</td><td>–</td><td>I<sub>eq</sub> = ΣI<sub>k</sub> (selon les orientations)<br>1/r<sub>eq</sub> = Σ 1/r<sub>k</sub></td></tr></table>
+<p>Pour deux générateurs de tension en parallèle : <span class="f">E<sub>eq</sub> = (E₁r₂ + E₂r₁) / (r₁ + r₂)</span>. Même formule que deux résistances en parallèle pour r<sub>eq</sub>. Cela vient de I = (E₁/r₁ + E₂/r₂) − U(1/r₁ + 1/r₂), identifié à I = (E<sub>eq</sub> − U)/r<sub>eq</sub>.</p></section>
+
+<section id="transfo" style="--c:var(--d2)"><h2>7. Transformation de sources</h2>
+<p>Une source de tension v<sub>s</sub> avec R en série équivaut à une source de courant i<sub>s</sub> avec la même R en parallèle.</p>
+<div class="key"><div class="f">i<sub>s</sub> = v<sub>s</sub> / R &nbsp;&nbsp;et&nbsp;&nbsp; v<sub>ab</sub> = i<sub>s</sub> · R</div></div>
+<figure class="card"><svg viewBox="0 0 540 165" role="img" aria-label="Équivalence source de tension et source de courant"><defs><marker id="m4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--d4)"/></marker></defs><path class="w" d="M50 30H103 M147 30H190 M50 30V63 M50 107V140 M50 140H190"/><circle class="w" cx="50" cy="85" r="22"/><text x="50" y="82" text-anchor="middle">+</text><text x="50" y="101" text-anchor="middle">−</text><rect class="r" x="103" y="21" width="44" height="18"/><circle class="w" cx="190" cy="30" r="4" style="fill:var(--card)"/><circle class="w" cx="190" cy="140" r="4" style="fill:var(--card)"/><text x="82" y="90" text-anchor="start">v<tspan font-size="11" dy="4">s</tspan></text><text x="125" y="14" text-anchor="middle">R</text><text x="200" y="34" text-anchor="start">a</text><text x="200" y="144" text-anchor="start">b</text><path class="a" d="M230 85L300 85" marker-end="url(#m4)" marker-start="url(#m4)"/><path class="w" d="M340 30H470 M340 30V63 M340 107V140 M340 140H470 M420 30V63 M420 107V140"/><circle class="w" cx="340" cy="85" r="22"/><path class="w" d="M340 97V73M334 80L340 72L346 80"/><rect class="r" x="411" y="63" width="18" height="44"/><circle class="w" cx="470" cy="30" r="4" style="fill:var(--card)"/><circle class="w" cx="470" cy="140" r="4" style="fill:var(--card)"/><text x="368" y="90" text-anchor="start">i<tspan font-size="11" dy="4">s</tspan></text><text x="440" y="90" text-anchor="start">R</text><text x="480" y="34" text-anchor="start">a</text><text x="480" y="144" text-anchor="start">b</text></svg><figcaption>Exemple du cours (fig. 1) : 24 V avec 12 Ω ⇒ 2 A avec 12 Ω en parallèle</figcaption></figure>
+<p>Astuce : transformer toutes les branches en sources de courant, additionner les courants, puis combiner toutes les résistances en parallèle.</p></section>
+
+<section id="kirchhoff" style="--c:var(--d3)"><h2>8. Lois de Kirchhoff</h2>
+<div class="two"><div class="card"><h3>Loi des nœuds</h3><p>La somme des courants qui entrent dans un nœud égale la somme de ceux qui en sortent.</p>
+<figure><svg viewBox="0 0 220 170" role="img" aria-label="Nœud à quatre courants"><path class="w" d="M20 85h180M110 20v130"/><circle class="t" cx="110" cy="85" r="5"/><path class="a" d="M50 85h40M82 79l8 6-8 6M190 85h-40M158 79l-8 6 8 6M110 60V30M104 38l6-8 6 8M110 110v30M104 132l6 8 6-8"/><text x="50" y="76">I₁</text><text x="165" y="76">I₂</text><text x="118" y="42">I₃</text><text x="118" y="136">I₄</text></svg></figure>
+<div class="key"><div class="f">I₁ + I₂ = I₃ + I₄</div></div>
+<details><summary>Exemple : I₁ = 2 A, I₂ = 3 A, I₃ = −2 A</summary><p>I₄ = I₁ + I₂ − I₃ = 2 + 3 − (−2) = <b>7 A</b></p></details></div>
+<div class="card"><h3>Loi des mailles</h3><p>Dans une maille fermée, la somme algébrique des tensions est nulle.</p>
+<div class="key"><div class="f">Σ U<sub>k</sub> = 0</div></div>
+<p><b>Méthode :</b> choisir un sens de parcours ; compter + une tension orientée dans ce sens, − sinon.</p>
+<p>L'exemple du cours donne E₁ = 15 V, V₁ = 8 V, E₂ = 2 V pour trouver V₃ ; le schéma n'était pas joint, donc on applique la méthode dessus une fois le sens des tensions connu.</p></div></div></section>
+
+<section id="kennelly" style="--c:var(--d4)"><h2>9. Kennelly : étoile ↔ triangle</h2>
+<p>Sert quand les résistances ne se simplifient ni en série ni en parallèle. La transformation conserve les relations tensions/courants aux bornes A, B, C.</p>
+<figure class="card"><svg viewBox="0 0 610 222" role="img" aria-label="Étoile et triangle"><defs><marker id="m6" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--d4)"/></marker></defs><path class="w" d="M34 100H63 M107 100H193 M237 100H266 M150 100V128 M150 172V196"/><rect class="r" x="63" y="91" width="44" height="18"/><rect class="r" x="193" y="91" width="44" height="18"/><rect class="r" x="141" y="128" width="18" height="44"/><circle class="t" cx="150" cy="100" r="4"/><circle class="w" cx="30" cy="100" r="4" style="fill:var(--card)"/><circle class="w" cx="270" cy="100" r="4" style="fill:var(--card)"/><circle class="w" cx="150" cy="200" r="4" style="fill:var(--card)"/><text x="30" y="86" text-anchor="middle">A</text><text x="270" y="86" text-anchor="middle">B</text><text x="168" y="212" text-anchor="start">C</text><text x="85" y="82" text-anchor="middle">R<tspan font-size="11" dy="4">A</tspan></text><text x="215" y="82" text-anchor="middle">R<tspan font-size="11" dy="4">B</tspan></text><text x="170" y="155" text-anchor="start">R<tspan font-size="11" dy="4">C</tspan></text><path class="a" d="M300 110L340 110" marker-end="url(#m6)" marker-start="url(#m6)"/><path class="w" d="M366 45H448 M492 45H554 M380 45V78 M380 122V175 M560 45V78 M560 122V175 M380 175H560 M470 175V196"/><rect class="r" x="448" y="36" width="44" height="18"/><rect class="r" x="371" y="78" width="18" height="44"/><rect class="r" x="551" y="78" width="18" height="44"/><circle class="t" cx="380" cy="45" r="4"/><circle class="t" cx="560" cy="45" r="4"/><circle class="t" cx="470" cy="175" r="4"/><circle class="w" cx="360" cy="45" r="4" style="fill:var(--card)"/><circle class="w" cx="580" cy="45" r="4" style="fill:var(--card)"/><circle class="w" cx="470" cy="200" r="4" style="fill:var(--card)"/><text x="360" y="30" text-anchor="middle">A</text><text x="580" y="30" text-anchor="middle">B</text><text x="486" y="212" text-anchor="start">C</text><text x="470" y="27" text-anchor="middle">R<tspan font-size="11" dy="4">AB</tspan></text><text x="366" y="104" text-anchor="end">R<tspan font-size="11" dy="4">AC</tspan></text><text x="574" y="104" text-anchor="start">R<tspan font-size="11" dy="4">BC</tspan></text></svg><figcaption>Étoile (T ou Y) ↔ triangle (Π ou Δ), mêmes bornes A, B, C</figcaption></figure>
+<div class="two"><div class="card"><h3>Étoile → Triangle</h3><div class="key"><div class="f">S = R<sub>A</sub>R<sub>B</sub> + R<sub>B</sub>R<sub>C</sub> + R<sub>C</sub>R<sub>A</sub><br>R<sub>AB</sub> = S / R<sub>C</sub><br>R<sub>BC</sub> = S / R<sub>A</sub><br>R<sub>CA</sub> = S / R<sub>B</sub></div></div><p>Pour trois résistances égales : R<sub>Δ</sub> = 3R<sub>Y</sub>.</p></div>
+<div class="card"><h3>Triangle → Étoile</h3><div class="key"><div class="f">Σ = R<sub>AB</sub> + R<sub>BC</sub> + R<sub>CA</sub><br>R<sub>A</sub> = R<sub>AB</sub>R<sub>CA</sub> / Σ<br>R<sub>B</sub> = R<sub>AB</sub>R<sub>BC</sub> / Σ<br>R<sub>C</sub> = R<sub>BC</sub>R<sub>CA</sub> / Σ</div></div><p>Astuce : chaque résistance de l'étoile touche une borne ; on multiplie les deux résistances du triangle qui touchent cette borne.</p></div></div></section>
+
+<section id="superpo" style="--c:var(--d5)"><h2>10. Théorème de superposition</h2>
+<p>Pour un circuit linéaire avec plusieurs sources indépendantes, la tension (ou le courant) cherchée est la <b>somme algébrique</b> des valeurs obtenues quand chaque source agit seule.</p>
+<div class="card"><table><tr><th>Source éteinte</th><th>Remplacée par</th></tr><tr><td>Source de tension</td><td>Un fil (court-circuit)</td></tr><tr><td>Source de courant</td><td>Un circuit ouvert (retirée)</td></tr></table></div>
+<div class="key"><div class="f">U = U′ + U″ + … &nbsp;&nbsp; I = I′ + I″ + …</div></div>
+<p><b>Méthode :</b> 1) garder une seule source, éteindre les autres ; 2) simplifier (série, parallèle, diviseurs) et calculer ; 3) recommencer pour chaque source ; 4) additionner en respectant les sens.</p>
+<p>Dans le schéma de tes notes, deux générateurs E₁ et E₂ alimentent R₁, R₂, R₃ : on calcule U avec E₁ seule (E₂ court-circuitée), puis avec E₂ seule, et on additionne.</p></section>
+
+<section id="calc" style="--c:var(--d1)"><h2>Calculateur</h2><div class="card">
+<h3>Résistances et diviseurs</h3>
+<label>R₁ (Ω) <input id="r1" type="number" value="100"></label><label>R₂ (Ω) <input id="r2" type="number" value="300"></label><label>E (V) <input id="e" type="number" value="12"></label><label>I (A) <input id="i" type="number" value="2"></label>
+<div class="out" id="o"></div></div></section>
+
+<section id="recap" style="--c:var(--d2)"><h2>Formulaire</h2><div class="card"><table>
+<tr><th>Sujet</th><th>Formule</th></tr>
+<tr><td>Ohm, puissance</td><td>U = R·I ; P = U·I</td></tr>
+<tr><td>Série</td><td>R<sub>eq</sub> = ΣR ; U<sub>k</sub> = E·R<sub>k</sub>/R<sub>eq</sub></td></tr>
+<tr><td>Parallèle</td><td>1/R<sub>eq</sub> = Σ1/R ; I₁ = I·R₂/(R₁+R₂)</td></tr>
+<tr><td>Générateurs parallèle</td><td>E<sub>eq</sub> = r<sub>eq</sub>Σ(E/r)</td></tr>
+<tr><td>Transformation</td><td>i<sub>s</sub> = v<sub>s</sub>/R</td></tr>
+<tr><td>Kirchhoff</td><td>ΣI<sub>entrants</sub> = ΣI<sub>sortants</sub> ; ΣU<sub>maille</sub> = 0</td></tr>
+<tr><td>Y → Δ</td><td>R<sub>AB</sub> = (R<sub>A</sub>R<sub>B</sub>+R<sub>B</sub>R<sub>C</sub>+R<sub>C</sub>R<sub>A</sub>)/R<sub>C</sub></td></tr>
+<tr><td>Δ → Y</td><td>R<sub>A</sub> = R<sub>AB</sub>R<sub>CA</sub>/(R<sub>AB</sub>+R<sub>BC</sub>+R<sub>CA</sub>)</td></tr></table></div></section>
+<section id="quiz" style="--c:var(--d3)"><h2>Auto-test</h2><p>Réponds dans ta tête, puis ouvre.</p>
+<details><summary>Deux résistances de 100 Ω et 300 Ω en parallèle : R<sub>eq</sub> ?</summary><p>100·300 / 400 = 75 Ω (toujours plus petite que la plus petite résistance).</p></details>
+<details><summary>E = 12 V sur R₁ = 100 Ω et R₂ = 300 Ω en série : U₂ ?</summary><p>U₂ = 12 · 300/400 = 9 V.</p></details>
+<details><summary>Un courant de 2 A arrive sur 100 Ω et 300 Ω en parallèle : I₁ ?</summary><p>I₁ = 2 · 300/400 = 1,5 A ; I₂ = 0,5 A. La plus petite résistance prend le plus de courant.</p></details>
+<details><summary>Une source de 24 V avec 12 Ω en série : source de courant équivalente ?</summary><p>i<sub>s</sub> = 24/12 = 2 A avec 12 Ω en parallèle.</p></details>
+<details><summary>Trois résistances égales à 30 Ω en étoile : triangle équivalent ?</summary><p>R<sub>Δ</sub> = 3 · R<sub>Y</sub> = 90 Ω chacune.</p></details>
+<details><summary>Que devient une source de tension éteinte dans la superposition ? Et une source de courant ?</summary><p>La source de tension devient un fil (court-circuit) ; la source de courant est retirée (circuit ouvert).</p></details></section>
+</main>
+<script>
+(function(){const r=document.documentElement,b=document.getElementById("th");b.addEventListener("click",()=>{const d=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=d?"light":"dark"})})();
+const $=id=>document.getElementById(id),f=x=>Math.round(x*1000)/1000;
+function calc(){const a=+$('r1').value,b=+$('r2').value,E=+$('e').value,I=+$('i').value;
+if(!(a>0&&b>0)){$('o').textContent='Entre des résistances positives.';return}
+$('o').innerHTML=`Série : R<sub>eq</sub> = <span>${f(a+b)} Ω</span> ; U₁ = <span>${f(E*a/(a+b))} V</span>, U₂ = <span>${f(E*b/(a+b))} V</span><br>Parallèle : R<sub>eq</sub> = <span>${f(a*b/(a+b))} Ω</span> ; I₁ = <span>${f(I*b/(a+b))} A</span>, I₂ = <span>${f(I*a/(a+b))} A</span>`}
+document.querySelectorAll('#calc input').forEach(x=>x.addEventListener('input',calc));calc();
+</script></body></html>
