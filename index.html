@@ -41,7 +41,7 @@ ul{padding-left:20px;margin:6px 0}
 <symbol id="R" viewBox="0 0 44 18"><rect class="r" x="1" y="1" width="42" height="16"/></symbol>
 <symbol id="B" viewBox="0 0 14 30"><path class="w" d="M2 4v22M10 10v10" style="stroke-width:3"/></symbol>
 </defs></svg>
-<nav><a href="#base">Notions de base</a><a href="#dipoles">Dipôles</a><a href="#sources">Sources</a><a href="#serie">Série</a><a href="#parallele">Parallèle</a><a href="#gen">Générateurs</a><a href="#transfo">Transformation</a><a href="#kirchhoff">Kirchhoff</a><a href="#kennelly">Kennelly</a><a href="#superpo">Superposition</a><a href="#calc">Calculateur</a><a href="#recap">Formulaire</a><a href="#quiz">Auto-test</a><button id="th" aria-label="Changer de thème">Thème</button></nav>
+<nav><a href="#base">Notions de base</a><a href="#dipoles">Dipôles</a><a href="#sources">Sources</a><a href="#serie">Série</a><a href="#parallele">Parallèle</a><a href="#gen">Générateurs</a><a href="#transfo">Transformation</a><a href="#kirchhoff">Kirchhoff</a><a href="#kennelly">Kennelly</a><a href="#superpo">Superposition</a><a href="#millman">Millman</a><a href="#calc">Calculateur</a><a href="#recap">Formulaire</a><a href="#quiz">Auto-test</a><button id="th" aria-label="Changer de thème">Thème</button></nav>
 <header><h1>Circuits électriques : révision complète</h1><p>Chapitre 1 (introduction aux circuits) et chapitre 2 (méthodes de résolution) au même endroit, avec schémas, formules encadrées et un calculateur.</p>
 <div class="bar"><i style="background:var(--d1)"></i><i style="background:var(--d2)"></i><i style="background:var(--d3)"></i><i style="background:var(--d4)"></i><i style="background:var(--d5)"></i></div></header>
 <main>
@@ -109,45 +109,4 @@ ul{padding-left:20px;margin:6px 0}
 
 <section id="kennelly" style="--c:var(--d4)"><h2>9. Kennelly : étoile ↔ triangle</h2>
 <p>Sert quand les résistances ne se simplifient ni en série ni en parallèle. La transformation conserve les relations tensions/courants aux bornes A, B, C.</p>
-<figure class="card"><svg viewBox="0 0 610 222" role="img" aria-label="Étoile et triangle"><defs><marker id="m6" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--d4)"/></marker></defs><path class="w" d="M34 100H63 M107 100H193 M237 100H266 M150 100V128 M150 172V196"/><rect class="r" x="63" y="91" width="44" height="18"/><rect class="r" x="193" y="91" width="44" height="18"/><rect class="r" x="141" y="128" width="18" height="44"/><circle class="t" cx="150" cy="100" r="4"/><circle class="w" cx="30" cy="100" r="4" style="fill:var(--card)"/><circle class="w" cx="270" cy="100" r="4" style="fill:var(--card)"/><circle class="w" cx="150" cy="200" r="4" style="fill:var(--card)"/><text x="30" y="86" text-anchor="middle">A</text><text x="270" y="86" text-anchor="middle">B</text><text x="168" y="212" text-anchor="start">C</text><text x="85" y="82" text-anchor="middle">R<tspan font-size="11" dy="4">A</tspan></text><text x="215" y="82" text-anchor="middle">R<tspan font-size="11" dy="4">B</tspan></text><text x="170" y="155" text-anchor="start">R<tspan font-size="11" dy="4">C</tspan></text><path class="a" d="M300 110L340 110" marker-end="url(#m6)" marker-start="url(#m6)"/><path class="w" d="M366 45H448 M492 45H554 M380 45V78 M380 122V175 M560 45V78 M560 122V175 M380 175H560 M470 175V196"/><rect class="r" x="448" y="36" width="44" height="18"/><rect class="r" x="371" y="78" width="18" height="44"/><rect class="r" x="551" y="78" width="18" height="44"/><circle class="t" cx="380" cy="45" r="4"/><circle class="t" cx="560" cy="45" r="4"/><circle class="t" cx="470" cy="175" r="4"/><circle class="w" cx="360" cy="45" r="4" style="fill:var(--card)"/><circle class="w" cx="580" cy="45" r="4" style="fill:var(--card)"/><circle class="w" cx="470" cy="200" r="4" style="fill:var(--card)"/><text x="360" y="30" text-anchor="middle">A</text><text x="580" y="30" text-anchor="middle">B</text><text x="486" y="212" text-anchor="start">C</text><text x="470" y="27" text-anchor="middle">R<tspan font-size="11" dy="4">AB</tspan></text><text x="366" y="104" text-anchor="end">R<tspan font-size="11" dy="4">AC</tspan></text><text x="574" y="104" text-anchor="start">R<tspan font-size="11" dy="4">BC</tspan></text></svg><figcaption>Étoile (T ou Y) ↔ triangle (Π ou Δ), mêmes bornes A, B, C</figcaption></figure>
-<div class="two"><div class="card"><h3>Étoile → Triangle</h3><div class="key"><div class="f">S = R<sub>A</sub>R<sub>B</sub> + R<sub>B</sub>R<sub>C</sub> + R<sub>C</sub>R<sub>A</sub><br>R<sub>AB</sub> = S / R<sub>C</sub><br>R<sub>BC</sub> = S / R<sub>A</sub><br>R<sub>CA</sub> = S / R<sub>B</sub></div></div><p>Pour trois résistances égales : R<sub>Δ</sub> = 3R<sub>Y</sub>.</p></div>
-<div class="card"><h3>Triangle → Étoile</h3><div class="key"><div class="f">Σ = R<sub>AB</sub> + R<sub>BC</sub> + R<sub>CA</sub><br>R<sub>A</sub> = R<sub>AB</sub>R<sub>CA</sub> / Σ<br>R<sub>B</sub> = R<sub>AB</sub>R<sub>BC</sub> / Σ<br>R<sub>C</sub> = R<sub>BC</sub>R<sub>CA</sub> / Σ</div></div><p>Astuce : chaque résistance de l'étoile touche une borne ; on multiplie les deux résistances du triangle qui touchent cette borne.</p></div></div></section>
-
-<section id="superpo" style="--c:var(--d5)"><h2>10. Théorème de superposition</h2>
-<p>Pour un circuit linéaire avec plusieurs sources indépendantes, la tension (ou le courant) cherchée est la <b>somme algébrique</b> des valeurs obtenues quand chaque source agit seule.</p>
-<div class="card"><table><tr><th>Source éteinte</th><th>Remplacée par</th></tr><tr><td>Source de tension</td><td>Un fil (court-circuit)</td></tr><tr><td>Source de courant</td><td>Un circuit ouvert (retirée)</td></tr></table></div>
-<div class="key"><div class="f">U = U′ + U″ + … &nbsp;&nbsp; I = I′ + I″ + …</div></div>
-<p><b>Méthode :</b> 1) garder une seule source, éteindre les autres ; 2) simplifier (série, parallèle, diviseurs) et calculer ; 3) recommencer pour chaque source ; 4) additionner en respectant les sens.</p>
-<p>Dans le schéma de tes notes, deux générateurs E₁ et E₂ alimentent R₁, R₂, R₃ : on calcule U avec E₁ seule (E₂ court-circuitée), puis avec E₂ seule, et on additionne.</p></section>
-
-<section id="calc" style="--c:var(--d1)"><h2>Calculateur</h2><div class="card">
-<h3>Résistances et diviseurs</h3>
-<label>R₁ (Ω) <input id="r1" type="number" value="100"></label><label>R₂ (Ω) <input id="r2" type="number" value="300"></label><label>E (V) <input id="e" type="number" value="12"></label><label>I (A) <input id="i" type="number" value="2"></label>
-<div class="out" id="o"></div></div></section>
-
-<section id="recap" style="--c:var(--d2)"><h2>Formulaire</h2><div class="card"><table>
-<tr><th>Sujet</th><th>Formule</th></tr>
-<tr><td>Ohm, puissance</td><td>U = R·I ; P = U·I</td></tr>
-<tr><td>Série</td><td>R<sub>eq</sub> = ΣR ; U<sub>k</sub> = E·R<sub>k</sub>/R<sub>eq</sub></td></tr>
-<tr><td>Parallèle</td><td>1/R<sub>eq</sub> = Σ1/R ; I₁ = I·R₂/(R₁+R₂)</td></tr>
-<tr><td>Générateurs parallèle</td><td>E<sub>eq</sub> = r<sub>eq</sub>Σ(E/r)</td></tr>
-<tr><td>Transformation</td><td>i<sub>s</sub> = v<sub>s</sub>/R</td></tr>
-<tr><td>Kirchhoff</td><td>ΣI<sub>entrants</sub> = ΣI<sub>sortants</sub> ; ΣU<sub>maille</sub> = 0</td></tr>
-<tr><td>Y → Δ</td><td>R<sub>AB</sub> = (R<sub>A</sub>R<sub>B</sub>+R<sub>B</sub>R<sub>C</sub>+R<sub>C</sub>R<sub>A</sub>)/R<sub>C</sub></td></tr>
-<tr><td>Δ → Y</td><td>R<sub>A</sub> = R<sub>AB</sub>R<sub>CA</sub>/(R<sub>AB</sub>+R<sub>BC</sub>+R<sub>CA</sub>)</td></tr></table></div></section>
-<section id="quiz" style="--c:var(--d3)"><h2>Auto-test</h2><p>Réponds dans ta tête, puis ouvre.</p>
-<details><summary>Deux résistances de 100 Ω et 300 Ω en parallèle : R<sub>eq</sub> ?</summary><p>100·300 / 400 = 75 Ω (toujours plus petite que la plus petite résistance).</p></details>
-<details><summary>E = 12 V sur R₁ = 100 Ω et R₂ = 300 Ω en série : U₂ ?</summary><p>U₂ = 12 · 300/400 = 9 V.</p></details>
-<details><summary>Un courant de 2 A arrive sur 100 Ω et 300 Ω en parallèle : I₁ ?</summary><p>I₁ = 2 · 300/400 = 1,5 A ; I₂ = 0,5 A. La plus petite résistance prend le plus de courant.</p></details>
-<details><summary>Une source de 24 V avec 12 Ω en série : source de courant équivalente ?</summary><p>i<sub>s</sub> = 24/12 = 2 A avec 12 Ω en parallèle.</p></details>
-<details><summary>Trois résistances égales à 30 Ω en étoile : triangle équivalent ?</summary><p>R<sub>Δ</sub> = 3 · R<sub>Y</sub> = 90 Ω chacune.</p></details>
-<details><summary>Que devient une source de tension éteinte dans la superposition ? Et une source de courant ?</summary><p>La source de tension devient un fil (court-circuit) ; la source de courant est retirée (circuit ouvert).</p></details></section>
-</main>
-<script>
-(function(){const r=document.documentElement,b=document.getElementById("th");b.addEventListener("click",()=>{const d=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=d?"light":"dark"})})();
-const $=id=>document.getElementById(id),f=x=>Math.round(x*1000)/1000;
-function calc(){const a=+$('r1').value,b=+$('r2').value,E=+$('e').value,I=+$('i').value;
-if(!(a>0&&b>0)){$('o').textContent='Entre des résistances positives.';return}
-$('o').innerHTML=`Série : R<sub>eq</sub> = <span>${f(a+b)} Ω</span> ; U₁ = <span>${f(E*a/(a+b))} V</span>, U₂ = <span>${f(E*b/(a+b))} V</span><br>Parallèle : R<sub>eq</sub> = <span>${f(a*b/(a+b))} Ω</span> ; I₁ = <span>${f(I*b/(a+b))} A</span>, I₂ = <span>${f(I*a/(a+b))} A</span>`}
-document.querySelectorAll('#calc input').forEach(x=>x.addEventListener('input',calc));calc();
-</script></body></html>
+<figure class="card"><svg viewBox="0 0 610 222" role="img" aria-label="Étoile et triangle"><defs><marker id="m6" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--d4)"/></marker></defs><path class="w" d="M34 100H63 M107 100H193 M237 100H266 M150 100V128 M150 172V196"/><rect class="r" x="63" y="91" width="44" height="18"/><rect class="r" x="193" y="91" width="44" height="18"/><rect class="r" x="141" y="128" width="18" height="44"/><circle class="t" cx="150" cy="100" r="4"/><circle class="w" cx="30" cy="100" r="4" style="fill:var(--card)"/><circle class="w" cx="270" cy="100" r="4" style="fill:var(--card)"/><circle class="w" cx="150" cy="200" r="4" style="fill:var(--card)"/><text x="30" y="86" text-anchor="middle">A</text><text x="270" y="86" text-anchor="middle">B</text><text x=
